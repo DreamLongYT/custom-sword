@@ -17,8 +17,8 @@ public class SwordCommand implements CommandExecutor {
         Player player = (Player) sender;
         
         if (player.hasPermission("customsword.give")) {
-            player.getInventory().addItem(SwordItem.createBladeOfBlood());
-            player.sendMessage("§aYou have received the Blade of Blood!");
+            player.getInventory().addItem(SwordItem.createBloodySword());
+            player.sendMessage("§aYou have received the Bloody Sword!");
             return true;
         } else {
             player.sendMessage("§cYou do not have permission to use this command.");
