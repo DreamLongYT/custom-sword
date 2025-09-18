@@ -10,19 +10,22 @@ import java.util.Arrays;
 
 public class SwordItem {
 
-    private static final NamespacedKey CUSTOM_SWORD_KEY = new NamespacedKey(CustomSword.getInstance(), "custom_sword");
+    private static final NamespacedKey CUSTOM_SWORD_KEY = new NamespacedKey(CustomSword.getInstance(), "bloody_sword");
     private static final NamespacedKey DAMAGE_COUNT_KEY = new NamespacedKey(CustomSword.getInstance(), "damage_count");
+    private static final int CUSTOM_MODEL_DATA = 5634; // The CMD for your custom texture
 
-    public static ItemStack createBladeOfBlood() {
-        ItemStack item = new ItemStack(Material.DIAMOND_SWORD);
+    public static ItemStack createBloodySword() {
+        ItemStack item = new ItemStack(Material.NETHERITE_SWORD);
         ItemMeta meta = item.getItemMeta();
 
-        meta.setDisplayName("§4Blade of Blood");
+        meta.setDisplayName("§4Bloody Sword");
         
-        meta.getPersistentDataContainer().set(CUSTOM_SWORD_KEY, PersistentDataType.STRING, "blade_of_blood");
+        meta.getPersistentDataContainer().set(CUSTOM_SWORD_KEY, PersistentDataType.STRING, "bloody_sword");
 
-        int initialDamage = 1;
+        int initialDamage = 1; 
         meta.getPersistentDataContainer().set(DAMAGE_COUNT_KEY, PersistentDataType.INTEGER, initialDamage);
+        
+        meta.setCustomModelData(CUSTOM_MODEL_DATA);
         
         updateLore(meta, initialDamage);
 
@@ -31,7 +34,7 @@ public class SwordItem {
         return item;
     }
 
-    public static boolean isCustomSword(ItemStack item) {
+    public static boolean isBloodySword(ItemStack item) {
         if (item == null || item.getItemMeta() == null) {
             return false;
         }
