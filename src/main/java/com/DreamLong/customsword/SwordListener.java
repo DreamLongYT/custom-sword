@@ -14,10 +14,10 @@ public class SwordListener implements Listener {
             Player killer = event.getEntity().getKiller();
             ItemStack hand = killer.getInventory().getItemInMainHand();
 
-            if (SwordItem.isCustomSword(hand)) {
+            if (SwordItem.isBloodySword(hand)) {
                 SwordItem.incrementDamage(hand);
                 
-                killer.sendMessage("§cYour Blade of Blood has grown stronger! Damage Count: §4" + SwordItem.getDamageCount(hand));
+                killer.sendMessage("§cYour Bloody Sword has grown stronger! Damage Count: §4" + SwordItem.getDamageCount(hand));
             }
         }
     }
