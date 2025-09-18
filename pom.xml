@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.yourname</groupId>
+    <groupId>com.DreamLong</groupId>
     <artifactId>custom-sword</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
@@ -50,7 +50,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>com.yourname.customsword.CustomSword</mainClass>
+                            <mainClass>com.DreamLong.customsword.CustomSword</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
