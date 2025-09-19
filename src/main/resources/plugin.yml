@@ -1,0 +1,12 @@
+main: com.DreamLong.customsword.CustomSword
+name: custom-sword
+version: 1.1
+api-version: 1.21
+commands:
+  customsword:
+    description: Gives you the custom sword.
+    usage: /customsword
+permissions:
+  customsword.give:
+    description: Allows a player to receive the custom sword.
+    default: op
