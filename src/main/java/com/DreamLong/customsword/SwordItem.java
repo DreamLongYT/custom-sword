@@ -15,7 +15,7 @@ public class SwordItem {
     private static final int CUSTOM_MODEL_DATA = 5634; // The CMD for your custom texture
 
     public static ItemStack createBloodySword() {
-        ItemStack item = new ItemStack(Material.NETHERITE_SWORD);
+        ItemStack item = new ItemStack(Material.WOODEN_SWORD);
         ItemMeta meta = item.getItemMeta();
 
         meta.setDisplayName("§4Bloody Sword");
