@@ -54,7 +54,7 @@ public class SwordItem {
         ItemMeta meta = item.getItemMeta();
         if (meta != null) {
             int currentDamage = getDamageCount(item);
-            int newDamage = currentDamage + 1;
+            int newDamage = currentDamage + 2;
             meta.getPersistentDataContainer().set(DAMAGE_COUNT_KEY, PersistentDataType.INTEGER, newDamage);
             updateLore(meta, newDamage);
             item.setItemMeta(meta);
