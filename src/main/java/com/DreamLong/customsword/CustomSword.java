@@ -9,7 +9,11 @@ public class CustomSword extends JavaPlugin {
     @Override
     public void onEnable() {
         instance = this;
+        // Registriere den Listener für Kills, der den Schaden-Zähler erhöht
         getServer().getPluginManager().registerEvents(new SwordListener(), this);
+        // Registriere den Listener für jeden Treffer, der den Schaden anpasst
+        getServer().getPluginManager().registerEvents(new DamageListener(), this);
+        
         getCommand("customsword").setExecutor(new SwordCommand());
         getLogger().info("CustomSword has been enabled!");
     }
